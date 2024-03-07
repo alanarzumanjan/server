@@ -1,4 +1,4 @@
-TARGET = ah
+TARGET = client
 SRC_FILE = $(TARGET).cpp
 
 CC = g++

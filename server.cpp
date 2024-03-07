@@ -15,12 +15,11 @@ int main()
 {
     int server_fd;
     int new_socket;
-
     long valread;
 
     struct sockaddr_in address;
     int addrlen = sizeof(address);
-
+    
     char *hello = "Vi kto takie? ja vas suda ne zval!\n";
 
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
