@@ -1,10 +1,10 @@
-TARGET = client
+TARGET = myserver
 SRC_FILE = $(TARGET).cpp
 
 CC = g++
 CFLAGS = -lm -std=c++14
 
-all: clean build
+all: clean build run
 
 build:
 	g++ $(SRC_FILE) -o $(TARGET).o

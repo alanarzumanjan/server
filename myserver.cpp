@@ -2,6 +2,10 @@
 #include <netinet/in.h>
 #include <cstring>
 #include <unistd.h>
+#include <cstring>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <string>
 
 #define SOCKET_OPENING_ERROR -1
 #define BIND_ERROR -2
@@ -20,7 +24,9 @@ int main()
     struct sockaddr_in address;
     int addrlen = sizeof(address);
 
-    char *hello = "Hello from server!\n";
+    cout << "Enter message: ";
+    string message;
+    cin >> message;
 
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -67,7 +73,7 @@ int main()
         {
             cout << "Message received: " << buffer << endl;
         }
-        write(new_socket, hello, strlen(hello));
+        write(new_socket, message.c_str(), message.length());
         cout << "Hello message sent" << endl;
         close(new_socket);
     }
