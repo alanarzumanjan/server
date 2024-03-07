@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     struct sockaddr_in serv_address;
     int addrlen = sizeof(serv_address);
     char *hello = "Hello from server";
-
+    
     char buffer[1024] = {0};
 
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) == 0) {

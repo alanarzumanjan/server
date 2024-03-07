@@ -2,10 +2,10 @@
 #include <netinet/in.h>
 #include <cstring>
 #include <unistd.h>
-#include <cstring>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <string>
+#include <thread>
 
 #define SOCKET_OPENING_ERROR -1
 #define BIND_ERROR -2
