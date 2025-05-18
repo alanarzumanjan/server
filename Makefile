@@ -14,8 +14,3 @@ run:
 
 clean:
 	rm -f $(TARGET) *.o
-	
-push:
-	git add .
-	git commit -a -m "Sleep"
-	git push
